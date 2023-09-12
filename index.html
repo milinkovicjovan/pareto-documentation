@@ -3,658 +3,617 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&family=Poppins:wght@300;400;500;700&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700;8..144,800&family=Roboto:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link href="/css/theme.min.css" rel="stylesheet" />
     <title>Document</title>
   </head>
-  <style>
-    img {
-      width: 100%;
-      object-fit: cover;
-    }
-
-    .pareto-parent {
-      display: flex;
-      justify-content: center;
-      margin: 0 auto;
-      max-width: 1400px;
-      padding: 32px 0;
-      width: 100%;
-    }
-
-    .pareto-documentation {
-      text-align: center;
-      max-width: 1000px;
-      width: 100%;
-      margin: 0 10px;
-    }
-
-    .pareto-sidebar {
-      position: relative;
-      max-width: 400px;
-      width: 100%;
-    }
-
-    .pareto-sidebar__fixed {
-      position: fixed;
-      max-width: 400px;
-      top: 0;
-      right: 0;
-      padding: 50px 10px;
-    }
-
-    .pareto-sidebar__fixed ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    .pareto-sidebar__fixed ul li {
-      margin-bottom: 10px;
-    }
-    .pareto-sidebar__fixed ul li a {
-      text-decoration: none;
-      color: blue;
-      font-family: Manrope;
-      font-weight: 800;
-    }
-    #creating-a-project,
-    #create-a-report {
-      font-size: 40px;
-    }
-    #creating-a-project,
-    #create-a-report,
-    #creating-a-report-without-a-url,
-    #creating-a-report-with-a-url,
-    #alerts-and-notifications,
-    #standard-settings,
-    #advanced-settings,
-    #competitors-table,
-    #entities-table,
-    #content-editor,
-    #create-a-page-with-the-generated-content-and-track-results,
-    #optimizing-content-in-the-content-editor,
-    #content-trackers,
-    #report-tags,
-    #alerts,
-    #notifications,
-    #check-the-recommended-competitors,
-    #check-the-extracted-text-and-adjust-if-needed,
-    #check-recommended-entities-and-adjust-the-selections,
-    #write-the-content-so-you-get-the-content-score-as-close-as-possible-to-100,
-    #making-competitor-alerts,
-    #making-entity-alerts {
-      font-family: Manrope;
-      font-weight: 800;
-    }
-    .pareto-sidebar__header-elements {
-      margin-left: 10px;
-      font-family: Manrope;
-    }
-    .pareto-sidebar__subheader-elements {
-      margin-left: 30px;
-      font-family: Manrope;
-    }
-    .pareto-sidebar__italic-elements {
-      margin-left: 45px;
-      font-family: Manrope;
-    }
-    .pareto-documentation__paragraphs {
-      font-family: Manrope;
-      margin: 20px;
-    }
-    .pareto-documentation__flex-container {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin: 50px 0;
-    }
-    @media (max-width: 1300px) {
-      .pareto-documentation__flex-container {
-        flex-direction: column;
-      }
-      .pareto-sidebar,
-      .pareto-sidebar__fixed {
-        max-width: 300px;
-      }
-    }
-    @media (max-width: 768px) {
-      .pareto-sidebar {
-        display: none;
-      }
-      #creating-a-project,
-      #create-a-report {
-        font-size: 26px;
-      }
-    }
-  </style>
   <body>
-    <section class="pareto-parent">
-      <div class="pareto-documentation">
-        <div class="pareto-documentation__creating-project">
-          <h2 id="creating-a-project">CREATING A PROJECT</h2>
-          <p class="pareto-documentation__paragraphs">
-            To begin a new project, click on the “+ Create Project” button to
-            open the create project form.
-          </p>
-          <img
-            style="max-width: 205px"
-            src="/images/create-project-button.png"
-          />
-          <p class="pareto-documentation__paragraphs">
-            The project form consists of two parts:
-          </p>
-          <p class="pareto-documentation__paragraphs">
-            <b> 1)The standard settings. </b>
-          </p>
-          <p class="pareto-documentation__paragraphs">
-            <b> 2)The advanced settings. </b>
-          </p>
-          <p class="pareto-documentation__paragraphs">
-            The following picture shows both parts:
-          </p>
-          <img style="max-width: 641px" src="/images/create-project.png" />
-          <h4 id="standard-settings">Standard settings</h4>
-          <p class="pareto-documentation__paragraphs">
-            In the standard settings type in a Project name. Under Location,
-            choose a location by typing a location in the autocomplete text
-            field. Next, choose the Language and Search Engine as the defaults
-            for the project (ensuing reports) by clicking on the respective
-            dropdown selection menus.
-          </p>
-          <h4 id="advanced-settings">Advanced Settings</h4>
-          <p class="pareto-documentation__paragraphs">
-            The advanced settings are activated by clicking on the ‘Advanced
-            Settings’ accordion which expands and shows the Competitor Count
-            Threshold (CCT), Salience Threshold (ST), and Word Count
-            Threshold(WCT) . The default values for: CCT is 3, ST is 0.2, and
-            WCT is 1. You can choose to create the project with the default
-            values or change these values which will affect what the default
-            values will be for the reports made in the project.
-          </p>
-          <p class="pareto-documentation__paragraphs">
-            Once all the information is entered (the Project Name and Location
-            are required fields) click “Save” and the project is created.
-          </p>
-        </div>
-        <div class="pareto-documentation__creating-report">
-          <h2 id="create-a-report">Create A Report</h2>
-          <p class="pareto-documentation__paragraphs">
-            When a project is made, you can create a report with the “Create
-            Report” form:
-          </p>
-          <div class="pareto-documentation__flex-container">
-            <img src="images/create-report.png" />
-            <div>
-              <p class="pareto-documentation__paragraphs">
-                This form also has standard and advanced settings.
-              </p>
-              <p class="pareto-documentation__paragraphs">
-                In the standard settings fill out or choose the following
-                information: Report Name, URL (*optional), Keyword, Location,
-                Language, Search Engine, and Scrape Frequency.
-              </p>
-              <p class="pareto-documentation__paragraphs">
-                *The URL can be added later. The default location, language, and
-                search engine are taken from the ‘Project settings’. The default
-                Scrape Frequency is set to<b> “Paused” </b>so you need to adjust
-                this to the frequency you would prefer.
-              </p>
-            </div>
+    <div class="container" style="max-width: 1400px">
+      <section class="row p-3">
+        <div class="col-12 col-xl-8">
+          <div>
+            <h2 id="creating-a-project" class="pt-5">CREATING A PROJECT</h2>
+            <p class="mb-4 pb-2">
+              To begin a new project, click on the “+ Create Project” button to
+              open the create project form.
+            </p>
+            <img
+              class="p-3 w-100"
+              style="max-width: 205px"
+              src="/images/create-project-button.png"
+            />
+            <p class="mb-4 pb-2">The project form consists of two parts:</p>
+            <p class="mb-4 pb-2">
+              <b> 1)The standard settings. </b>
+            </p>
+            <p class="mb-4 pb-2">
+              <b> 2)The advanced settings. </b>
+            </p>
+            <p class="mb-4 pb-2">The following picture shows both parts:</p>
+            <img
+              class="p-3 w-100"
+              style="max-width: 641px"
+              src="/images/create-project.png"
+            />
+            <h4 id="standard-settings" class="pt-5">Standard settings</h4>
+            <p class="mb-4 pb-2">
+              In the standard settings type in a Project name. Under Location,
+              choose a location by typing a location in the autocomplete text
+              field. Next, choose the Language and Search Engine as the defaults
+              for the project (ensuing reports) by clicking on the respective
+              dropdown selection menus.
+            </p>
+            <h4 id="advanced-settings" class="pt-5">Advanced Settings</h4>
+            <p class="mb-4 pb-2">
+              The advanced settings are activated by clicking on the ‘Advanced
+              Settings’ accordion which expands and shows the Competitor Count
+              Threshold (CCT), Salience Threshold (ST), and Word Count
+              Threshold(WCT) . The default values for: CCT is 3, ST is 0.2, and
+              WCT is 1. You can choose to create the project with the default
+              values or change these values which will affect what the default
+              values will be for the reports made in the project.
+            </p>
+            <p class="mb-4 pb-2">
+              Once all the information is entered (the Project Name and Location
+              are required fields) click “Save” and the project is created.
+            </p>
           </div>
-          <div class="pareto-documentation__flex-container">
-            <p class="pareto-documentation__paragraphs">
+          <div>
+            <h2 id="create-a-report" class="pt-5">Create A Report</h2>
+            <p class="mb-4 pb-2">
+              When a project is made, you can create a report with the “Create
+              Report” form:
+            </p>
+            <p class="mb-4 pb-2">
+              This form also has standard and advanced settings.
+            </p>
+            <p class="mb-4 pb-2">
+              In the standard settings fill out or choose the following
+              information: Report Name, URL (*optional), Keyword, Location,
+              Language, Search Engine, and Scrape Frequency.
+            </p>
+            <p class="mb-4 pb-2">
+              *The URL can be added later. The default location, language, and
+              search engine are taken from the ‘Project settings’. The default
+              Scrape Frequency is set to<b> “Paused” </b>so you need to adjust
+              this to the frequency you would prefer.
+            </p>
+            <img
+              style="max-width: 640px"
+              class="p-3 pb-5 w-100"
+              src="images/create-report.png"
+            />
+            <p class="mb-4 pb-2">
               If you want to change the Competitor Count Threshold (CCT),
               Salience Threshold (ST), and Word Count Threshold (WCT) from the
               Project default values, click on ‘Advanced Settings’ and enter new
               values as in this picture:
             </p>
-            <img src="images/advanced-settings.png" />
+            <img
+              style="max-width: 640px"
+              class="p-3 w-100"
+              src="images/advanced-settings.png"
+            />
           </div>
-        </div>
-        <div class="creating-a-report-without-a-url">
-          <h3 id="creating-a-report-without-a-url">
-            Creating a Report - Without a URL
-          </h3>
-          <p class="pareto-documentation__paragraphs">
-            To create a report without a URL, enter a Report Name, a Keyword,
-            and a Location. The Keyword, Location, and Search Engine cannot be
-            changed after making a report. The other settings have default
-            values inherited from the project which can be changed in the report
-            form. A URL can be added later after making the report.
-          </p>
-          <h4 id="competitors-table">Competitors Table</h4>
-          <p class="pareto-documentation__paragraphs">
-            When the report is finished, the first thing you see when you open
-            it is the competitors table. Here we can see the first 20 URLs which
-            respond to the Keyword, Language, Location, and Search Engine
-            entered to create the report with additional data.
-          </p>
-          <h5 id="check-the-recommended-competitors">
-            <i> Check the recommended competitors </i>
-          </h5>
-          <p class="pareto-documentation__paragraphs">
-            The next step is to check the recommended competitor URLs (the
-            default is 8) which have been selected. If necessary, you can select
-            additional or deselect chosen competitors to edit the report and the
-            results in the entities table will update accordingly. To change the
-            selection, click on the boxes next to the competitors as in the
-            picture.
-          </p>
-          <img style="max-width: 914px" src="images/competitor-table.png" />
-          <h5 id="check-the-extracted-text-and-adjust-if-needed">
-            <i> Check the extracted text and adjust if needed </i>
-          </h5>
-          <div class="pareto-documentation__flex-container">
-            <p class="pareto-documentation__paragraphs">
-              After checking and/or editing the competitor selection, the next
-              step is checking and adjusting the extracted text. To access the
-              extracted text for a competitor and edit it, click on the “Render
-              Window” button to open the render window:
+          <div>
+            <h3 id="creating-a-report-without-a-url" class="pt-5">
+              Creating a Report - Without a URL
+            </h3>
+            <p class="mb-4 pb-2">
+              To create a report without a URL, enter a Report Name, a Keyword,
+              and a Location. The Keyword, Location, and Search Engine cannot be
+              changed after making a report. The other settings have default
+              values inherited from the project which can be changed in the
+              report form. A URL can be added later after making the report.
             </p>
-            <img style="max-width: 102px" src="images/render.png" />
-          </div>
-          <p class="pareto-documentation__paragraphs">
-            The render window shows a screenshot of the URL which was scraped,
-            and a panel on the right side with controls and information. To
-            access and edit the extracted text, click on the ‘Edit Extracted
-            Text’ checkbox in the right panel, as seen in the image below (1).
-            This opens the text editor (Extracted Text) where we can see and
-            edit the text which was extracted.
-          </p>
-          <img src="/images/extractedtext.png" />
-          <p class="pareto-documentation__paragraphs">
-            After making the desired changes, click on ‘Save Extracted Text’
-            (2), and the report will update the information for the competitor
-            and the report. A notification shows that the report has been
-            updated.
-          </p>
-          <p class="pareto-documentation__paragraphs">
-            The
-            <b> headers used by the competitor </b>
-            will be grouped at the top in the extracted text editor.
-          </p>
-          <h4 id="entities-table">Entities Table</h4>
-          <p class="pareto-documentation__paragraphs">
-            After checking and editing the extracted text, it is time to move on
-            to the entities section. There we can see a list of entities that
-            satisfy the parameters previously set for the report (Competitor
-            Count Threshold, Salience Threshold, and Word Count Threshold). The
-            entities section contains two tables, Timestamp Entities and Report
-            Entities.
-          </p>
-          <p class="pareto-documentation__paragraphs">
-            The Timestamp Entities table shows a list of entities with
-            preselected entities based on recommended competitors and the report
-            threshold values (full yellow stars).
-          </p>
-          <img src="images/entitiestable.png" />
-          <p class="pareto-documentation__paragraphs">
-            This table also shows
-            <b> “Heading Average Frequency” </b>
-            which tells us how often competitors used these entities on average,
-            across different heading styles (H1/H2/H3).
-          </p>
-          <h5 id="check-recommended-entities-and-adjust-the-selections">
-            <i>
+            <h4 id="competitors-table">Competitors Table</h4>
+            <p class="mb-4 pb-2">
+              When the report is finished, the first thing you see when you open
+              it is the competitors table. Here we can see the first 20 URLs
+              which respond to the Keyword, Language, Location, and Search
+              Engine entered to create the report with additional data.
+            </p>
+            <h5 id="check-the-recommended-competitors">
+              Check the recommended competitors
+            </h5>
+            <p class="mb-4 pb-2">
+              The next step is to check the recommended competitor URLs (the
+              default is 8) which have been selected. If necessary, you can
+              select additional or deselect chosen competitors to edit the
+              report and the results in the entities table will update
+              accordingly. To change the selection, click on the boxes next to
+              the competitors as in the picture.
+            </p>
+            <img
+              style="max-width: 888px"
+              class="w-100"
+              src="images/competitor-table.png"
+            />
+            <h5 id="check-the-extracted-text-and-adjust-if-needed" class="pt-5">
+              Check the extracted text and adjust if needed
+            </h5>
+            <div class="d-flex flex-column flex-xl-row my-xl-5">
+              <p class="mb-4 pb-2">
+                After checking and/or editing the competitor selection, the next
+                step is checking and adjusting the extracted text. To access the
+                extracted text for a competitor and edit it, click on the
+                “Render Window” button to open the render window:
+              </p>
+              <img
+                style="max-width: 102px"
+                class="p-1 w-100"
+                src="images/render.png"
+              />
+            </div>
+            <p class="mb-4 pb-2">
+              The render window shows a screenshot of the URL which was scraped,
+              and a panel on the right side with controls and information. To
+              access and edit the extracted text, click on the ‘Edit Extracted
+              Text’ checkbox in the right panel, as seen in the image below (1).
+              This opens the text editor (Extracted Text) where we can see and
+              edit the text which was extracted.
+            </p>
+            <img src="/images/extractedtext.png" class="pb-3 w-100" />
+            <p class="mb-4 pb-2">
+              After making the desired changes, click on ‘Save Extracted Text’
+              (2), and the report will update the information for the competitor
+              and the report. A notification shows that the report has been
+              updated.
+            </p>
+            <p class="mb-4 pb-2">
+              The
+              <b> headers used by the competitor </b>
+              will be grouped at the top in the extracted text editor.
+            </p>
+            <h4 id="entities-table" class="pt-5">Entities Table</h4>
+            <p class="mb-4 pb-2">
+              After checking and editing the extracted text, it is time to move
+              on to the entities section. There we can see a list of entities
+              that satisfy the parameters previously set for the report
+              (Competitor Count Threshold, Salience Threshold, and Word Count
+              Threshold). The entities section contains two tables, Timestamp
+              Entities and Report Entities.
+            </p>
+            <p class="mb-4 pb-2">
+              The Timestamp Entities table shows a list of entities with
+              preselected entities based on recommended competitors and the
+              report threshold values (full yellow stars).
+            </p>
+            <img src="images/entitiestable.png" class="pb-3 w-100" />
+            <p class="mb-4 pb-2">
+              This table also shows
+              <b> “Heading Average Frequency” </b>
+              which tells us how often competitors used these entities on
+              average, across different heading styles (H1/H2/H3).
+            </p>
+            <h5
+              id="check-recommended-entities-and-adjust-the-selections"
+              class="pt-5"
+            >
               Check recommended entities and adjust the selections (use filters)
-            </i>
-          </h5>
-          <div class="pareto-documentation__flex-container">
-            <img style="max-width: 700px" src="images/filters.png" />
-            <p class="pareto-documentation__paragraphs">
+            </h5>
+            <p class="mb-4 pb-2">
               We can then additionally filter out entities by Competitor Count,
               Average Salience, and Entity Word Count. This shows other entities
               which were select by the predefined parameters an we can select or
               deselect additional report entities:
             </p>
-          </div>
-          <p class="pareto-documentation__paragraphs">
-            To add entities to the selection click on the empty stars. To review
-            the final selection of entities, go to the Report Entities table.
-            There we can deselect entities by clicking on the full yellow stars.
-          </p>
-          <h4 id="content-editor">Content Editor</h4>
-          <p class="pareto-documentation__paragraphs">
-            Following the finalization of entity inspection and selection, the
-            next step is going to the ‘Content Editor’. This features a text
-            editor where we write our content with basic writing tools and a
-            right side panel which provides: a live content score, headings
-            counter (with a recommended average of h1, h2 and h3 headings), word
-            counter and recommended entities.
-          </p>
-          <img src="images/contenteditor.png" />
-          <h5
-            id="write-the-content-so-you-get-the-content-score-as-close-as-possible-to-100"
-          >
-            <i>
+            <img
+              style="max-width: 700px"
+              class="pb-5 w-100"
+              src="images/filters.png"
+            />
+            <p class="mb-4 pb-2">
+              To add entities to the selection click on the empty stars. To
+              review the final selection of entities, go to the Report Entities
+              table. There we can deselect entities by clicking on the full
+              yellow stars.
+            </p>
+            <h4 id="content-editor" class="pt-5">Content Editor</h4>
+            <p class="mb-4 pb-2">
+              Following the finalization of entity inspection and selection, the
+              next step is going to the ‘Content Editor’. This features a text
+              editor where we write our content with basic writing tools and a
+              right side panel which provides: a live content score, headings
+              counter (with a recommended average of h1, h2 and h3 headings),
+              word counter and recommended entities.
+            </p>
+            <img src="images/contenteditor.png" class="pb-3 w-100" />
+            <h5
+              id="write-the-content-so-you-get-the-content-score-as-close-as-possible-to-100"
+              class="pt-5"
+            >
               Write the content so you get the content score as close as
               possible to 100
-            </i>
-          </h5>
-          <p class="pareto-documentation__paragraphs">
-            In the Content Editor, we should write the content following the
-            guidelines within the sidebar. By following the guidelines, the
-            content score will go up. It is recommendable to get as close as
-            possible to a 100. The right sidebar of the Content Editor has two
-            sections where can see the guidelines based off of the report data
-            which was collected and reviewed.
-          </p>
-          <div class="pareto-documentation__flex-container">
-            <img style="max-width: 393px" src="images/contentscore.png" />
-            <p class="pareto-documentation__paragraphs">
-              In the first section there is a save button to save the content
-              created in the content editor. Just under it is the Content Score
-              meter and counters for Average H1 uses, Average H2 uses, Average
-              H3 uses, Average Word Count, and Average Image Count.
+            </h5>
+            <p class="mb-4 pb-2">
+              In the Content Editor, we should write the content following the
+              guidelines within the sidebar. By following the guidelines, the
+              content score will go up. It is recommendable to get as close as
+              possible to a 100. The right sidebar of the Content Editor has two
+              sections where can see the guidelines based off of the report data
+              which was collected and reviewed.
             </p>
-          </div>
-          <div class="pareto-documentation__flex-container">
-            <div>
-              <p class="pareto-documentation__paragraphs">
-                <b>The second</b> is the <b>Entities</b> section which is split
-                into two categories.
-              </p>
-              <p class="pareto-documentation__paragraphs">
-                Starting with <b>“Terms in headers”.</b> Here are the entity
-                recommendations for the headers. These trackers show
-                recommendations for entities to be used in headers. We can see
-                which header was used next to each entity. Headers are grouped
-                by usage. If one entity is used in every header then it will
-                show “h1/h2/h3” but if it only wasn’t used in H1, then the
-                header would have “h2/h3” tags. Headers contribute the most
-                points when they include entities from this section.
+            <div class="d-flex flex-column flex-xl-row my-xl-5">
+              <img
+                style="max-width: 393px"
+                class="p-3 w-100"
+                src="images/contentscore.png"
+              />
+              <p class="mb-4 pb-2">
+                In the first section there is a save button to save the content
+                created in the content editor. Just under it is the Content
+                Score meter and counters for Average H1 uses, Average H2 uses,
+                Average H3 uses, Average Word Count, and Average Image Count.
               </p>
             </div>
-            <img style="max-width: 254px" src="images/headersentities.png" />
-          </div>
-          <div class="pareto-documentation__flex-container">
-            <img style="max-width: 230px" src="images/headerstooltip.png" />
-            <p class="pareto-documentation__paragraphs">
-              Hovering over an entity in the ‘Terms in headers’ shows a tooltip.
-              This tooltip shows the usage data for this entity as a header
-              across the competitors. Clicking on the competitor (arranged by
-              rank) will open their respective render pages. Here we can inspect
-              the headers used by the competitor.
+            <div class="d-flex flex-column flex-xl-row my-xl-5">
+              <div>
+                <p class="mb-4 pb-2">
+                  <b>The second</b> is the <b>Entities</b> section which is
+                  split into two categories.
+                </p>
+                <p class="mb-4 pb-2">
+                  Starting with <b>“Terms in headers”.</b> Here are the entity
+                  recommendations for the headers. These trackers show
+                  recommendations for entities to be used in headers. We can see
+                  which header was used next to each entity. Headers are grouped
+                  by usage. If one entity is used in every header then it will
+                  show “h1/h2/h3” but if it only wasn’t used in H1, then the
+                  header would have “h2/h3” tags. Headers contribute the most
+                  points when they include entities from this section.
+                </p>
+              </div>
+              <img
+                style="max-width: 254px"
+                class="p-3 w-100"
+                src="images/headersentities.png"
+              />
+            </div>
+            <div class="d-flex flex-column flex-xl-row my-xl-5">
+              <img
+                style="max-width: 230px"
+                class="p-3 w-100"
+                src="images/headerstooltip.png"
+              />
+              <p class="mb-4 pb-2">
+                Hovering over an entity in the ‘Terms in headers’ shows a
+                tooltip. This tooltip shows the usage data for this entity as a
+                header across the competitors. Clicking on the competitor
+                (arranged by rank) will open their respective render pages. Here
+                we can inspect the headers used by the competitor.
+              </p>
+            </div>
+            <div class="d-flex flex-column flex-xl-row my-xl-5">
+              <p class="mb-4 pb-2">
+                Below “Terms in headers” we can see <b>“Terms in text”.</b> Next
+                to each entity is a tracker which tracks each use of an entity
+                in the entire text, headers included. The range to the right is
+                the targeted count for an entity based on the average entity
+                frequency. This range is the ‘green zone’, which represents
+                +-20% of the average frequency across competitors. The tracker
+                becomes GREEN when we hit this target. The tracker is ORANGE
+                when the number of uses is +-40% of the average frequency.
+                Finally, the tracker is RED when the number of uses is greater
+                than +40% of the average frequency. Red indicates overuse of the
+                entity. The entities in “Terms in text” also have a tooltip
+                which shows usage of an entity across competitors and other data
+                taken from the entities table. Clicking on the checkbox next to
+                an entity manually marks the entity as optimized.
+              </p>
+              <img
+                style="max-width: 222px"
+                class="p-3 w-100"
+                src="/images/textentities.png"
+              />
+            </div>
+            <p class="mb-4 pb-2">
+              By achieving the suggested targets from the counters for Average
+              H1 count, Average H2 count, Average H3 count, Average Word Count,
+              and the entity suggestions in the “Terms in headers” and “Terms in
+              text” sections - the Content Score goes up. If the content goes
+              above the recommended values, the Content Score goes down. When
+              all values are met the content score reaches 100.
             </p>
+            <h4
+              id="create-a-page-with-the-generated-content-and-track-results"
+              class="pt-5"
+            >
+              Create a page with the generated content and track results
+            </h4>
+            <div class="d-flex flex-column flex-xl-row my-xl-5">
+              <img
+                style="max-width: 483px"
+                class="p-3 w-100"
+                src="images/editurl.png"
+              />
+              <p class="mb-4 pb-2">
+                Next we take the generated content and add it to our website and
+                publish. After it is online we take the URL of our site and add
+                it to the report. To do this, open the report, click on ‘Edit’
+                to open the edit section (1). Paste the link in the URL text
+                field (2), and click Save.
+              </p>
+            </div>
+            <div class="d-flex flex-column flex-xl-row my-xl-5">
+              <p class="mb-4 pb-2">
+                Then the report will pick up the changes with the next timestamp
+                and we can track the results and make adjustments to the content
+                over time. Adding a URL to a report enables a new button in the
+                content editor. This button allows us to pull content from the
+                report URL page to the content editor.
+              </p>
+              <img
+                style="max-width: 464px"
+                class="p-3 w-100"
+                src="images/pullbutton.png"
+              />
+            </div>
           </div>
-          <div class="pareto-documentation__flex-container">
-            <p class="pareto-documentation__paragraphs">
-              Below “Terms in headers” we can see <b>“Terms in text”.</b> Next
-              to each entity is a tracker which tracks each use of an entity in
-              the entire text, headers included. The range to the right is the
-              targeted count for an entity based on the average entity
-              frequency. This range is the ‘green zone’, which represents +-20%
-              of the average frequency across competitors. The tracker becomes
-              GREEN when we hit this target. The tracker is ORANGE when the
-              number of uses is +-40% of the average frequency. Finally, the
-              tracker is RED when the number of uses is greater than +40% of the
-              average frequency. Red indicates overuse of the entity. The
-              entities in “Terms in text” also have a tooltip which shows usage
-              of an entity across competitors and other data taken from the
-              entities table. Clicking on the checkbox next to an entity
-              manually marks the entity as optimized.
-            </p>
-            <img style="max-width: 222px" src="/images/textentities.png" />
-          </div>
-          <p class="pareto-documentation__paragraphs">
-            By achieving the suggested targets from the counters for Average H1
-            count, Average H2 count, Average H3 count, Average Word Count, and
-            the entity suggestions in the “Terms in headers” and “Terms in text”
-            sections - the Content Score goes up. If the content goes above the
-            recommended values, the Content Score goes down. When all values are
-            met the content score reaches 100.
-          </p>
-          <h4 id="create-a-page-with-the-generated-content-and-track-results">
-            Create a page with the generated content and track results
-          </h4>
-          <div class="pareto-documentation__flex-container">
-            <img style="max-width: 483px" src="images/editurl.png" />
-            <p class="pareto-documentation__paragraphs">
-              Next we take the generated content and add it to our website and
-              publish. After it is online we take the URL of our site and add it
-              to the report. To do this, open the report, click on ‘Edit’ to
-              open the edit section (1). Paste the link in the URL text field
-              (2), and click Save.
-            </p>
-          </div>
-          <div class="pareto-documentation__flex-container">
-            <p class="pareto-documentation__paragraphs">
-              Then the report will pick up the changes with the next timestamp
-              and we can track the results and make adjustments to the content
-              over time. Adding a URL to a report enables a new button in the
-              content editor. This button allows us to pull content from the
-              report URL page to the content editor.
-            </p>
-            <img style="max-width: 464px" src="images/pullbutton.png" />
-          </div>
-        </div>
-        <div class="creating-a-report-with-a-url">
-          <h3 id="creating-a-report-with-a-url">
-            Creating a Report - With a URL
-          </h3>
-          <div class="pareto-documentation__flex-container">
-            <img src="images/addurlfield.png" />
-            <p class="pareto-documentation__paragraphs">
+          <div>
+            <h3 id="creating-a-report-with-a-url" class="pt-5">
+              Creating a Report - With a URL
+            </h3>
+            <p class="mb-4 pb-2">
               To create a report with a targeted URL, you need to additionally
-              fill out the URL field of the report. The other steps are the same
-              steps as when creating a report without a URL. Check the
-              competitor selection, check the extracted text, as well as check
-              and adjust the selection of entities where necessary.
+              fill out the URL field of the report.
             </p>
-          </div>
-          <p class="pareto-documentation__paragraphs">
-            The entities table does show more information for a report with a
-            URL. It shows the average count of entities among competitors in
-            comparison to the usage of the same entities in the report URL. The
-            top bar indicates the average frequency of an entity across
-            competitors, and the bottom bar indicates the average entity
-            frequency for the report URL. It is advisable to take notice of
-            these differences when finalizing entity selection as overused and
-            underused entities are good candidates to be optimized.
-          </p>
-          <img style="max-width: 747px" src="images/entitydiff.png" />
-          <p class="pareto-documentation__paragraphs">
-            For the bottom bar, GREEN indicates the entity is optimized. ORANGE
-            indicates ‘medium optimization’. RED indicates ‘No Optimization’
-            (when the entity is underused or overused). This information is also
-            shown in the Entity deviation chart which shows the status of the
-            entity over time.
-          </p>
-          <div class="pareto-documentation__flex-container">
-            <p class="pareto-documentation__paragraphs">
+            <p class="mb-4 pb-2">
+              The other steps are the same steps as when creating a report
+              without a URL. Check the competitor selection, check the extracted
+              text, as well as check and adjust the selection of entities where
+              necessary.
+            </p>
+            <img
+              style="max-width: 662px"
+              src="images/addurlfield.png"
+              class="p-3 w-100"
+            />
+            <p class="mb-4 pb-2">
+              The entities table does show more information for a report with a
+              URL. It shows the average count of entities among competitors in
+              comparison to the usage of the same entities in the report URL.
+              The top bar indicates the average frequency of an entity across
+              competitors, and the bottom bar indicates the average entity
+              frequency for the report URL. It is advisable to take notice of
+              these differences when finalizing entity selection as overused and
+              underused entities are good candidates to be optimized.
+            </p>
+            <img
+              style="max-width: 747px"
+              class="p-3 w-100"
+              src="images/entitydiff.png"
+            />
+            <p class="mb-4 pb-2">
+              For the bottom bar, GREEN indicates the entity is optimized.
+              ORANGE indicates ‘medium optimization’. RED indicates ‘No
+              Optimization’ (when the entity is underused or overused). This
+              information is also shown in the Entity deviation chart which
+              shows the status of the entity over time.
+            </p>
+            <p class="mb-4 pb-2">
               In this example the report had collected information 4 times. The
               entity “need” was not scraped once out of 4 times and was marked
               as “Entity is missing” for 25% of total times the report was run.
             </p>
-            <img style="max-width: 700px" src="/images/entitydeviation.png" />
-          </div>
-          <h4 id="optimizing-content-in-the-content-editor">
-            Optimizing content in the content editor
-          </h4>
-          <p class="pareto-documentation__paragraphs">
-            Regarding updating and optimizing the content from the report URL,
-            copying the content from our page to the content editor and making
-            adjustments to it is done manually. The content can be copied by
-            clicking the <b>“Pull report page content”</b> button (1). This
-            pulls the content from the report URL to the content editor. Or we
-            can also pull content by putting a URL in the ‘Enter URL’ text field
-            and clicking the “Try to auto import article text” button, if the
-            content is not on the report URL (2). Otherwise the content can be
-            directly from documents.
-          </p>
-          <img style="max-width: 914px" src="/images/importbuttons.png" />
-          <p class="pareto-documentation__paragraphs">
-            The goal being to get the content as close to 100 on the content
-            score meter as possible.
-          </p>
-          <h4 id="content-trackers">Content Trackers</h4>
-          <div class="pareto-documentation__flex-container">
-            <img style="max-width: 550px" src="images/content1.png" />
-            <p class="pareto-documentation__paragraphs">
-              A report with a URL will also have a tracker for when content is
-              created in the Content Editor (1) and a tracker for when the
-              content from the content editor was published on the report
-              URL(2).
+            <img
+              style="max-width: 700px"
+              class="p-3 w-100"
+              src="/images/entitydeviation.png"
+            />
+            <h4 id="optimizing-content-in-the-content-editor" class="pt-5">
+              Optimizing content in the content editor
+            </h4>
+            <p class="mb-4 pb-2">
+              Regarding updating and optimizing the content from the report URL,
+              copying the content from our page to the content editor and making
+              adjustments to it is done manually. The content can be copied by
+              clicking the <b>“Pull report page content”</b> button (1). This
+              pulls the content from the report URL to the content editor. Or we
+              can also pull content by putting a URL in the ‘Enter URL’ text
+              field and clicking the “Try to auto import article text” button,
+              if the content is not on the report URL (2). Otherwise the content
+              can be directly from documents.
             </p>
-          </div>
-          <div class="pareto-documentation__flex-container">
-            <p class="pareto-documentation__paragraphs">
-              When content is edited a date and time will appear next to
-              ‘Content Updated At:’. Once content has been optimized and copied
-              from the Content Editor to the URL, the report will pick up the
-              changes the next time the report performs a scrape. This updates
-              the SERP Score for the report URL and adds a date and time next to
-              ‘Content Published at:’. Alternatively, we can spend a couple of
-              credits and click on the re-scrape button (3) which would update
-              the SERP score and check if the content was published. If the
-              updated content isn’t detected for any reason, we can manually
-              update the ‘Content Published At’ date by clicking the edit button
-              next to it (4).
+            <img
+              style="max-width: 888px"
+              class="pb-3 w-100"
+              src="/images/importbuttons.png"
+            />
+            <p class="mb-4 pb-2">
+              The goal being to get the content as close to 100 on the content
+              score meter as possible.
             </p>
-            <img style="max-width: 550px" src="images/content2.png" />
-          </div>
-          <div class="pareto-documentation__flex-container">
-            <img src="images/content3.png" />
-            <p class="pareto-documentation__paragraphs">
+            <h4 id="content-trackers" class="pt-5">Content Trackers</h4>
+            <div class="d-flex flex-column flex-xl-row my-xl-5">
+              <img
+                style="max-width: 550px"
+                class="p-3 w-100"
+                src="images/content1.png"
+              />
+              <p class="mb-4 pb-2">
+                A report with a URL will also have a tracker for when content is
+                created in the Content Editor (1) and a tracker for when the
+                content from the content editor was published on the report
+                URL(2).
+              </p>
+            </div>
+            <div class="d-flex flex-column flex-xl-row my-xl-5">
+              <p class="mb-4 pb-2">
+                When content is edited a date and time will appear next to
+                ‘Content Updated At:’. Once content has been optimized and
+                copied from the Content Editor to the URL, the report will pick
+                up the changes the next time the report performs a scrape. This
+                updates the SERP Score for the report URL and adds a date and
+                time next to ‘Content Published at:’. Alternatively, we can
+                spend a couple of credits and click on the re-scrape button (3)
+                which would update the SERP score and check if the content was
+                published. If the updated content isn’t detected for any reason,
+                we can manually update the ‘Content Published At’ date by
+                clicking the edit button next to it (4).
+              </p>
+              <img
+                style="max-width: 550px; max-height: 258px"
+                class="p-3 w-100"
+                src="images/content2.png"
+              />
+            </div>
+            <p class="mb-4 pb-2">
               If the content is updated after it is published a small warning
               sign will appear to warn us the content is out of sync. This
               warning has a little tooltip to remind us that the content is out
               of sync.
             </p>
-          </div>
-          <h4 id="report-tags">Report Tags</h4>
-          <div class="pareto-documentation__flex-container">
-            <p class="pareto-documentation__paragraphs">
-              Report tags allow us to organize reports across multiple projects.
-              To start things off, click on ‘Tags’ in the left sidebar.
-            </p>
-            <img style="max-width: 354px" src="images/tags1.png" />
-          </div>
-          <div class="pareto-documentation__flex-container">
-            <img style="max-width: 700px" src="images/tags2.png" />
-            <p class="pareto-documentation__paragraphs">
+            <img
+              style="max-width: 634px"
+              src="images/content3.png"
+              class="p-3 w-100"
+            />
+            <h4 id="report-tags" class="pt-5">Report Tags</h4>
+            <div class="d-flex flex-column flex-xl-row my-xl-5">
+              <p class="mb-4 pb-2">
+                Report tags allow us to organize reports across multiple
+                projects. To start things off, click on ‘Tags’ in the left
+                sidebar.
+              </p>
+              <img
+                style="max-width: 354px"
+                class="p-3 w-100"
+                src="images/tags1.png"
+              />
+            </div>
+            <p class="mb-4 pb-2">
               This opens the Tags table. Click on “ + Create Tag” and the Create
               Tag window will appear. Enter a name for the tag and click Save.
             </p>
+            <img
+              style="max-width: 700px"
+              class="p-3 w-100"
+              src="images/tags2.png"
+            />
+            <p class="mb-4 pb-2">
+              After creating a tag, go to each report you want to mark with this
+              tag by editing reports in the reports table (1) or by editing the
+              report in the edit section of a report (2).
+            </p>
+            <img
+              style="max-width: 700px"
+              class="p-3 w-100"
+              src="images/tags3.png"
+            />
+            <img
+              style="max-width: 700px"
+              class="p-3 w-100"
+              src="images/tags4.png"
+            />
+            <p class="mb-4 pb-2">
+              Simply click on the selection menu under ‘Tags’ and a list of
+              available tags will appear. Click on the tag you want, and click
+              Save. Reports can have multiple tags.
+            </p>
+            <p class="mb-4 pb-2">
+              To view all reports with a specific tag, click on ‘Tags’ in the
+              left sidebar, and click on a tag in the ‘Report Tags’ table.
+            </p>
           </div>
-          <p class="pareto-documentation__paragraphs">
-            After creating a tag, go to each report you want to mark with this
-            tag by editing reports in the reports table (1) or by editing the
-            report in the edit section of a report (2).
-          </p>
-          <img style="max-width: 700px" src="images/tags3.png" />
-          <img
-            style="max-width: 700px; margin-top: 50px"
-            src="images/tags4.png"
-          />
-          <p class="pareto-documentation__paragraphs">
-            Simply click on the selection menu under ‘Tags’ and a list of
-            available tags will appear. Click on the tag you want, and click
-            Save. Reports can have multiple tags.
-          </p>
-          <p class="pareto-documentation__paragraphs">
-            To view all reports with a specific tag, click on ‘Tags’ in the left
-            sidebar, and click on a tag in the ‘Report Tags’ table.
-          </p>
-        </div>
-        <div class="alerts-and-notifications">
-          <h3 id="alerts-and-notifications">Alerts and Notifications</h3>
-          <h4 id="alerts">Alerts</h4>
-          <p class="pareto-documentation__paragraphs">
-            Once the report is made and the content is updated, a good idea
-            would be to create alerts for the report and email notifications.
-          </p>
-          <div class="pareto-documentation__flex-container">
-            <img src="images/alerts.png" />
-            <p class="pareto-documentation__paragraphs">
+          <div>
+            <h3 id="alerts-and-notifications" class="pt-5">
+              Alerts and Notifications
+            </h3>
+            <h4 id="alerts">Alerts</h4>
+            <p class="mb-4 pb-2">
+              Once the report is made and the content is updated, a good idea
+              would be to create alerts for the report and email notifications.
+            </p>
+            <p class="mb-4 pb-2">
               The first step is to create the alerts by clicking on the ‘Alerts’
               section. The first time there will be a form to create your first
               Alert. In the ‘Create Alert’ form fill out and make choices for:
               Name, Alert Type, Metric, Comparison Operator, and Threshold. The
               system supports alerts for Competitors and Entities.
             </p>
-          </div>
-          <h5 id="making-competitor-alerts">
-            <i> Making Competitor Alerts </i>
-          </h5>
-          <div class="pareto-documentation__flex-container">
-            <div>
-              <p class="pareto-documentation__paragraphs">
-                The first step is to choose ‘Competitor’ under Alert Type, this
-                will also show a new selection field called “Competitors”
-                (showing all the competitors from the competitors table). Next
-                choose ‘Rank’ for Metric. After that, choose the competitor
-                whose rank you want to track. Following that, select one of the
-                available Comparison Operators (Above/ Below/ Between/ Deviation
-                Threshold). Finally, enter a value for the ‘Threshold’.
-              </p>
-              <p class="pareto-documentation__paragraphs">
-                If the Comparison Operator is ‘Between’ then two values
-                (From/To) must be entered. Once all of the fields have been
-                filled out, click Save. A notification shows that the Alert was
-                made.
-              </p>
-            </div>
-            <img src="images/alert1.png" />
-          </div>
-          <h5 id="making-entity-alerts">
-            <i> Making Entity Alerts </i>
-          </h5>
-          <div class="pareto-documentation__flex-container">
-            <img src="images/alert2.png" />
-            <div>
-              <p class="pareto-documentation__paragraphs">
-                To make an alert for an entity, choose ‘Entity’ under Alert
-                Type, this will show a new selection field called “Entities”
-                (which shows all the entities from the report entities table).
-                Next, choose a metric to track, “Frequency” or “Salience”. After
-                that, choose an entity to track. Following that, selects one of
-                the available Comparison Operators (Above/ Below/ Between/
-                Deviation Threshold). Finally, enter the desired value under
-                threshold and click Save.
-              </p>
-              <p class="pareto-documentation__paragraphs">
-                Alerts trigger if their conditions are met when the report runs
-                a new scrape according to the defined ‘Scrape Frequency’.
-              </p>
-            </div>
-          </div>
-          <div class="pareto-documentation__flex-container">
-            <p class="pareto-documentation__paragraphs">
+            <img
+              style="max-width: 605px"
+              src="images/alerts.png"
+              class="p-3 w-100"
+            />
+            <h5 id="making-competitor-alerts" class="pt-5">
+              Making Competitor Alerts
+            </h5>
+
+            <p class="mb-4 pb-2">
+              The first step is to choose ‘Competitor’ under Alert Type, this
+              will also show a new selection field called “Competitors” (showing
+              all the competitors from the competitors table). Next choose
+              ‘Rank’ for Metric. After that, choose the competitor whose rank
+              you want to track. Following that, select one of the available
+              Comparison Operators (Above/ Below/ Between/ Deviation Threshold).
+              Finally, enter a value for the ‘Threshold’.
+            </p>
+            <p class="mb-4 pb-2">
+              If the Comparison Operator is ‘Between’ then two values (From/To)
+              must be entered. Once all of the fields have been filled out,
+              click Save. A notification shows that the Alert was made.
+            </p>
+            <img
+              style="max-width: 657px"
+              src="images/alert1.png"
+              class="p-3 w-100"
+            />
+            <h5 id="making-entity-alerts" class="pt-5">Making Entity Alerts</h5>
+            <p class="mb-4 pb-2">
+              To make an alert for an entity, choose ‘Entity’ under Alert Type,
+              this will show a new selection field called “Entities” (which
+              shows all the entities from the report entities table). Next,
+              choose a metric to track, “Frequency” or “Salience”. After that,
+              choose an entity to track. Following that, selects one of the
+              available Comparison Operators (Above/ Below/ Between/ Deviation
+              Threshold). Finally, enter the desired value under threshold and
+              click Save.
+            </p>
+            <p class="mb-4 pb-2">
+              Alerts trigger if their conditions are met when the report runs a
+              new scrape according to the defined ‘Scrape Frequency’.
+            </p>
+            <img
+              style="max-width: 657px"
+              src="images/alert2.png"
+              class="p-3 pb-5 w-100"
+            />
+            <p class="mb-4 pb-2">
               After creating the first alert, there will be a table which shows
               all of the alerts. To make additional alerts, click on the ‘Create
               Alert’ button. And follow the same steps as before.
             </p>
-            <img style="max-width: 700px" src="images/alert3.png" />
-          </div>
-          <h4 id="notifications">Notifications</h4>
-          <p class="pareto-documentation__paragraphs">
-            To get notified about an alert or multiple alerts, create a
-            notification which you will get on your email. To make a
-            notification click on the ‘Notifications’ section in the report. The
-            first time you will see a form to create your first Alert
-            Notification. After creating it, there will be a table which shows
-            all of the created notifications.
-          </p>
-          <div class="pareto-documentation__flex-container">
-            <img src="images/notifications.png" />
-            <div>
-              <p class="pareto-documentation__paragraphs">
-                In the Create notification form, input a ‘Notification Name’,
-                select an Alert from a selection menu (1), and click Save. A
-                notification shows that the Alert Notification was made.
-              </p>
-              <p class="pareto-documentation__paragraphs">
-                It’s possible to add more than one alert by clicking on ‘+ Add
-                Item’ (2). Additionally, there is the option to show and use
-                logical operators for the notifications with multiple alerts.
-              </p>
-            </div>
-          </div>
-          <div class="pareto-documentation__flex-container">
-            <p class="pareto-documentation__paragraphs">
+            <img
+              style="max-width: 700px"
+              class="p-3 w-100"
+              src="images/alert3.png"
+            />
+            <h4 id="notifications" class="pt-5">Notifications</h4>
+            <p class="mb-4 pb-2">
+              To get notified about an alert or multiple alerts, create a
+              notification which you will get on your email. To make a
+              notification click on the ‘Notifications’ section in the report.
+              The first time you will see a form to create your first Alert
+              Notification. After creating it, there will be a table which shows
+              all of the created notifications.
+            </p>
+            <p class="mb-4 pb-2">
+              In the Create notification form, input a ‘Notification Name’,
+              select an Alert from a selection menu (1), and click Save. A
+              notification shows that the Alert Notification was made.
+            </p>
+            <p class="mb-4 pb-2">
+              It’s possible to add more than one alert by clicking on ‘+ Add
+              Item’ (2). Additionally, there is the option to show and use
+              logical operators for the notifications with multiple alerts.
+            </p>
+            <img
+              style="max-width: 672px"
+              src="images/notifications.png"
+              class="p-3 w-100"
+            />
+            <p class="mb-4 pb-2">
               By clicking on the ‘Show Logical Operators?’ checkbox, the
               Operator selection boxes appear for each Alert. The available
               operators are “OR” and “AND”. By default all alerts have an “OR”
@@ -662,98 +621,153 @@
               click on the ‘Create Notification’ button in the Notifications
               section and follow the same steps as mentioned above.
             </p>
-            <img style="max-width: 700px" src="images/notifications1.png" />
+            <img
+              style="max-width: 700px"
+              class="p-3 w-100"
+              src="images/notifications1.png"
+            />
           </div>
         </div>
-      </div>
-      <div class="pareto-sidebar">
-        <div class="pareto-sidebar__fixed">
-          <ul>
-            <li>
-              <a href="#creating-a-project"> Creating a Project </a>
-            </li>
-            <li>
-              <a href="#create-a-report"> Create a Report </a>
-            </li>
-            <li class="pareto-sidebar__header-elements">
-              <a href="#creating-a-report-without-a-url">
-                Creating a report - Without a URL
-              </a>
-            </li>
-            <li class="pareto-sidebar__subheader-elements">
-              <a href="#competitors-table"> Competitors Table </a>
-            </li>
-            <li class="pareto-sidebar__italic-elements">
-              <a href="#check-the-recommended-competitors">
-                Check the recommended competitors
-              </a>
-            </li>
-            <li class="pareto-sidebar__italic-elements">
-              <a href="#check-the-extracted-text-and-adjust-if-needed">
-                Check the extracted text and adjust if needed
-              </a>
-            </li>
-            <li class="pareto-sidebar__subheader-elements">
-              <a href="#entities-table"> Entities Table </a>
-            </li>
-            <li class="pareto-sidebar__italic-elements">
-              <a href="#check-recommended-entities-and-adjust-the-selections">
-                Check recommended entities and adjust the selections (use
-                filters)
-              </a>
-            </li>
-            <li class="pareto-sidebar__subheader-elements">
-              <a href="#content-editor"> Content Editor </a>
-            </li>
-            <li class="pareto-sidebar__italic-elements">
-              <a
-                href="#write-the-content-so-you-get-the-content-score-as-close-as-possible-to-100"
-              >
-                Write the content so you get the content score as close as
-                possible to 100
-              </a>
-            </li>
-            <li class="pareto-sidebar__subheader-elements">
-              <a
-                href="#create-a-page-with-the-generated-content-and-track-results"
-              >
-                Create a page with the generated content and track results
-              </a>
-            </li>
-            <li class="pareto-sidebar__header-elements">
-              <a href="#creating-a-report-with-a-url">
-                Creating a report - With a URL
-              </a>
-            </li>
-            <li class="pareto-sidebar__subheader-elements">
-              <a href="#optimizing-content-in-the-content-editor">
-                Optimizing content in the content editor
-              </a>
-            </li>
-            <li class="pareto-sidebar__subheader-elements">
-              <a href="#content-trackers"> Content Trackers </a>
-            </li>
-            <li class="pareto-sidebar__subheader-elements">
-              <a href="#report-tags"> Report Tags </a>
-            </li>
-            <li class="pareto-sidebar__header-elements">
-              <a href="#alerts-and-notifications"> Alerts and Notifications </a>
-            </li>
-            <li class="pareto-sidebar__subheader-elements">
-              <a href="#alerts"> Alerts </a>
-            </li>
-            <li class="pareto-sidebar__italic-elements">
-              <a href="#making-competitor-alerts"> Making Competitor Alerts </a>
-            </li>
-            <li class="pareto-sidebar__italic-elements">
-              <a href="#making-entity-alerts"> Making Entity Alerts </a>
-            </li>
-            <li class="pareto-sidebar__subheader-elements">
-              <a href="#notifications"> Notifications </a>
-            </li>
-          </ul>
+        <div class="d-none d-xl-block col-xl-4">
+          <div
+            style="position: fixed; right: 0; top: 0; max-width: 430px"
+            class="p-3 pt-5"
+          >
+            <ul class="list-unstyled">
+              <li class="mb-1">
+                <a href="#creating-a-project" class="text-decoration-none">
+                  Creating a Project
+                </a>
+              </li>
+              <li class="mb-1">
+                <a href="#create-a-report" class="text-decoration-none">
+                  Create a Report
+                </a>
+              </li>
+              <li class="ms-2 mb-1">
+                <a
+                  href="#creating-a-report-without-a-url"
+                  class="text-decoration-none"
+                >
+                  Creating a report - Without a URL
+                </a>
+              </li>
+              <li class="ms-4 mb-1">
+                <a href="#competitors-table" class="text-decoration-none">
+                  Competitors Table
+                </a>
+              </li>
+              <li class="ms-5 mb-1">
+                <a
+                  href="#check-the-recommended-competitors"
+                  class="text-decoration-none"
+                >
+                  Check the recommended competitors
+                </a>
+              </li>
+              <li class="ms-5 mb-1">
+                <a
+                  href="#check-the-extracted-text-and-adjust-if-needed"
+                  class="text-decoration-none"
+                >
+                  Check the extracted text and adjust if needed
+                </a>
+              </li>
+              <li class="ms-4 mb-1">
+                <a href="#entities-table" class="text-decoration-none">
+                  Entities Table
+                </a>
+              </li>
+              <li class="ms-5 mb-1">
+                <a
+                  href="#check-recommended-entities-and-adjust-the-selections"
+                  class="text-decoration-none"
+                >
+                  Check recommended entities and adjust the selections (use
+                  filters)
+                </a>
+              </li>
+              <li class="ms-4 mb-1">
+                <a href="#content-editor" class="text-decoration-none">
+                  Content Editor
+                </a>
+              </li>
+              <li class="ms-5 mb-1">
+                <a
+                  href="#write-the-content-so-you-get-the-content-score-as-close-as-possible-to-100"
+                  class="text-decoration-none"
+                >
+                  Write the content so you get the content score as close as
+                  possible to 100
+                </a>
+              </li>
+              <li class="ms-4 mb-1">
+                <a
+                  href="#create-a-page-with-the-generated-content-and-track-results"
+                  class="text-decoration-none"
+                >
+                  Create a page with the generated content and track results
+                </a>
+              </li>
+              <li class="ms-2 mb-1">
+                <a
+                  href="#creating-a-report-with-a-url"
+                  class="text-decoration-none"
+                >
+                  Creating a report - With a URL
+                </a>
+              </li>
+              <li class="ms-4 mb-1">
+                <a
+                  href="#optimizing-content-in-the-content-editor"
+                  class="text-decoration-none"
+                >
+                  Optimizing content in the content editor
+                </a>
+              </li>
+              <li class="ms-4 mb-1">
+                <a href="#content-trackers" class="text-decoration-none">
+                  Content Trackers
+                </a>
+              </li>
+              <li class="ms-4 mb-1">
+                <a href="#report-tags" class="text-decoration-none">
+                  Report Tags
+                </a>
+              </li>
+              <li class="ms-2 mb-1">
+                <a
+                  href="#alerts-and-notifications"
+                  class="text-decoration-none"
+                >
+                  Alerts and Notifications
+                </a>
+              </li>
+              <li class="ms-4 mb-1">
+                <a href="#alerts" class="text-decoration-none"> Alerts </a>
+              </li>
+              <li class="ms-5 mb-1">
+                <a
+                  href="#making-competitor-alerts"
+                  class="text-decoration-none"
+                >
+                  Making Competitor Alerts
+                </a>
+              </li>
+              <li class="ms-5 mb-1">
+                <a href="#making-entity-alerts" class="text-decoration-none">
+                  Making Entity Alerts
+                </a>
+              </li>
+              <li class="ms-4 mb-1">
+                <a href="#notifications" class="text-decoration-none">
+                  Notifications
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </body>
 </html>
